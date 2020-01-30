@@ -21,7 +21,7 @@
   also we want that each item can be click by the user to see the details source so
   with routeLink we go to the path that we define in movie-routing to go to the other page
   //-->
-  <ion-item *ngFor = "let item of (results | async)" [routerLink]="['/','movies',item.idmbID]">
+  <ion-item *ngFor = "let item of (results | async)" [routerLink]="['/','movies',item.imdbID]">
     <!--We set what we are going to show after the search
     we are going to display an image if exists
     //-->
@@ -32,6 +32,7 @@
       <h2>{{item.Title}}</h2>
          {{item.Year}}
     </ion-label>
+    <!--Icons form ionicons.com//-->
     <ion-icon slot="end" *ngIf="item.Type == 'movie'" name="videocam"></ion-icon>
     <ion-icon slot="end" *ngIf="item.Type == 'series'" name="tv"></ion-icon>
     <ion-icon slot="end" *ngIf="item.Type == 'game'" name="logo-game-controller-b"></ion-icon>
